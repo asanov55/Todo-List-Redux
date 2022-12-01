@@ -1,8 +1,8 @@
 import './index.css';
 import './App.css';
 import { NewTodo } from './components/newTodo';
-import { TodoList } from './components/todoList';
-import Filters from './components/filters';
+import { TodoList } from './components/TodoList';
+import { Filters } from './components/filters';
 
 function App() {
   return (

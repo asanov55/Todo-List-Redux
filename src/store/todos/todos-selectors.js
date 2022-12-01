@@ -1,18 +1,18 @@
-export const allTodos = (state) => state.counter;
+export const selectAllTodos = (state) => state.todos;
 
-export const activeTodos = (state) =>
-  state.todos.filter((todo) => todo.complated === false);
+export const selectActiveTodos = (state) =>
+  state.todos.filter((todo) => todo.completed === false);
 
-export const selectVisibaleTodos = (state, filter) => {
+export const selectVisibleTodos = (state, filter) => {
   switch (filter) {
     case 'all': {
       return state.todos;
     }
     case 'active': {
-      return state.todos.filter((todo) => !todo.complated);
+      return state.todos.filter((todo) => !todo.completed);
     }
-    case 'complated': {
-      return state.todos.filter((todo) => todo.complated);
+    case 'completed': {
+      return state.todos.filter((todo) => todo.completed);
     }
     default: {
       return state.todos;
